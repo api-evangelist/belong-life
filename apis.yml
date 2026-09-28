@@ -1,23 +1,78 @@
 aid: belong-life
+
 name: Belong.Life
-description: 'Belong.Life is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://belong.life/wp-content/uploads/2021/11/LOGO-icon.png
+
+description: Belong.Life leverages AI and data to enhance patient engagement and healthcare outcomes, offering solutions for clinics, enterprises,
+  pharma, hospitals, payers, and advertisers. Their platform includes AI-driven cancer mentoring, weight management, and health assistants, alongside
+  clinical trial support and research tools, aiming to personalize care and improve decision-making across the health ecosystem.
+
 url: https://raw.githubusercontent.com/api-evangelist/belong-life/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
+- Health
+- AI
+- Patient Engagement
+- Digital Health
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/belong-life-hosts.yml
+- type: Vendors
+  url: vendors/belong-life-vendors.yml
+- type: TermsOfService
+  url: https://belong.life/terms-of-service/
+- type: PrivacyPolicy
+  url: https://belong.life/privacy-policy/
+- type: Newsroom
+  url: https://belong.life/press/
+- type: Blog
+  url: https://belong.life/blog/
+- type: DomainSecurity
+  url: security/belong-life-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://belong.life
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: All attempted OpenAPI endpoints returned HTTP 500 and no machine‑readable spec was found.
+  evidence:
+  - url: https://belong.life/openapi.json
+    status: 500
+  - url: https://belong.life/openapi.yaml
+    status: 500
+  - url: https://belong.life/swagger.json
+    status: 500
+  - url: https://belong.life/v1/openapi.json
+    status: 500
+  checked: '2026-09-27'
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
